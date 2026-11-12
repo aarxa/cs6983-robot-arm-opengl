@@ -11,6 +11,15 @@ C = (ka·Ia + kd·max(N·L, 0))·Il + ks·Il·max(N·H, 0)^α
 - `shaders/blinn_phong_vert.glsl`, `shaders/blinn_phong_frag.glsl` — Blinn-Phong shaders
 - `shaders/simple_vert.glsl`, `shaders/simple_frag.glsl` — flat-color shaders for the grid
 - `src/main.cpp` — OBJ loading, lighting uniforms, scene
+- `src/gl_loader.hpp` — loads the OpenGL functions the demo calls through `glfwGetProcAddress`
+- `CMakeLists.txt` — build setup; fetches GLFW 3.4 and GLM 1.0.1
+
+## Requirements
+
+- CMake 3.24 or newer
+- A C++17 compiler (Xcode Command Line Tools on macOS, Visual Studio 2019+ on Windows)
+- Git, so CMake can download GLFW and GLM on the first configure
+- A GPU and driver that support OpenGL 3.3 core
 
 ## Build and run (from the project root)
 
